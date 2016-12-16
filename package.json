@@ -1,0 +1,30 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "weather app landing page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgatherer/weather-app.git"
+  },
+  "author": "Christopher Gatherer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cgatherer/weather-app/issues"
+  },
+  "homepage": "https://github.com/cgatherer/weather-app#readme",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
+    "normalize.css": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11"
+  }
+}
