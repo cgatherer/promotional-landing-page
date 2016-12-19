@@ -60,7 +60,7 @@ a:hover {
   padding-top: 80px;
 }
 .is-sticky .navbar-default {
-  background: rgba(0, 51, 153, 0.87);
+  background: rgba(90, 142, 170, 0.87);
   padding: 15px 0;
   border-top: 1px solid #3DAFF6;
 }
@@ -174,6 +174,7 @@ a:hover {
 	color: #fff;
 	margin: 130px 0 20px 0;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	max-width: 300px;
 }
 .landing p {
 	color: #fff;
@@ -612,7 +613,7 @@ a:hover {
 	padding: 5px;
 	font-size: 30px;
 	text-align: center; 
-	color: rgb(242, 47, 47);
+	color: rgb(90, 142, 170);
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
@@ -765,6 +766,15 @@ padding:100px 0;
 	background: #202020;
 	color: white;
 }
+
+.input {
+	color:#000000; 
+}
+
+.terms {
+	text-shadow:1px 1px 1px #000000;
+}
+
 /* iPads (portrait) ----------- */
 @media only screen 
 and (min-width : 768px) 

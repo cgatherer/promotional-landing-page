@@ -1,20 +1,19 @@
 /* smooth scroll
 ----------------------------------------------*/
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
 /* scrollspy 
 ----------------------------------------------*/
@@ -23,27 +22,6 @@ $('body').scrollspy({ target: '#navbar-scroll' })
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
-});
-
-/* carousel 
-----------------------------------------------*/
-$(document).ready(function() {
-$("#screenshots").owlCarousel({
-	items: 4,
-	itemsCustom : [
-		[0, 1],
-		[480, 2],
-		[768, 3],
-		[992, 4]
-		],
-    }); 	
-$("#owl-clients").owlCarousel
-({
-	navigation : false, // Show next and prev buttons
-	slideSpeed : 300,
-	autoHeight : true,
-	singleItem:true
-});
 });
 
 
@@ -176,4 +154,24 @@ if(!$("html").hasClass("touch")){
     //$(window).focus(parallaxPosition);
     $(window).scroll(parallaxPosition);
     parallaxPosition();
+}
+
+/* Add “I Agree” checkbox in HTML/JavaScript
+----------------------------------------------*/
+function checkForm(form){
+    if(!form.terms.checked) {
+      	alert("Please indicate that you accept the Terms and Conditions");
+      	form.terms.focus();
+      	return false;
+    }
+	return true;
+}
+
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
 }
